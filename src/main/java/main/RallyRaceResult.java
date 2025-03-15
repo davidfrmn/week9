@@ -64,18 +64,13 @@ public class RallyRaceResult implements RaceResult{
         return order;
     }
 
-    public int getEarnedPoints(Driver driver){
-        return this.results.get(driver);
-    }
-
-
     public void displayResults(){
         System.out.println("Race: " + this.getRaceName() + " (" + this.getLocation() + ")");
         ArrayList<Driver> result = this.getResults();
         int position = 1;
         for (Driver driver : result) {
             String name = driver.getName();
-            int points = this.getEarnedPoints(driver);
+            int points = this.getDriverPoints(driver);
             System.out.print("\tPosition " + position + ": ");
             System.out.println(name + " - " + points);
             position++;
