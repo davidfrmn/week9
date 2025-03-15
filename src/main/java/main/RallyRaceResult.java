@@ -76,7 +76,7 @@ public class RallyRaceResult implements RaceResult{
         for (Driver driver : result) {
             String name = driver.getName();
             int points = this.getEarnedPoints(driver);
-            System.out.print("\tPosition " + String.valueOf(position) + ": ");
+            System.out.print("\tPosition " + position + ": ");
             System.out.println(name + " - " + points);
             position++;
         }
