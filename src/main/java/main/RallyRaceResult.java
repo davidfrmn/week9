@@ -30,7 +30,7 @@ public class RallyRaceResult implements RaceResult{
 
     @Override
     public int getDriverPoints(Driver driver){
-        return driver.getPoints();
+        return this.results.get(driver);
     }
 
     @Override
